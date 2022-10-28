@@ -1,0 +1,95 @@
+package Sparkhdfs.spark;
+
+import weka.distributed.spark.WekaClassifierEvaluationSparkJob;
+import weka.distributed.spark.WekaClassifierSparkJob;
+
+public class spark {
+	public static void main(String[] args) throws Exception
+	{
+		/*
+		String[] options = new String[17];
+		
+		options[0]="-input-file";
+		options[1]="hdfs://ip-172-31-13-179.us-east-2.compute.internal:8020/hypothyroid.csv";
+		options[2]="-names-file";
+		options[3]="hdfs://ip-172-31-13-179.us-east-2.compute.internal:8020/hypothyroid.names";
+		//options[4]="-weka-jar";
+		//options[5]="hdfs://ip-172-31-2-160.us-east-2.compute.internal:8020/weka.jar";
+		
+		options[4]="-header-file-name";
+		options[5]="hypothyroid.arff";
+		options[6]="-output-dir";
+		options[7]="hdfs://ip-172-31-13-179.us-east-2.compute.internal:8020/output";
+		options[8]="-master";
+		options[9]="yarn-cluster";
+		
+		options[10]="-W";
+		options[11]="weka.classifiers.functions.MultilayerPerceptron";
+		options[12]="--";
+		options[13]="-L";
+		
+		options[14]="0.3";
+		options[15]="-N";
+		
+		options[16]="500";
+				     
+		
+		WekaClassifierEvaluationSparkJob job = new WekaClassifierEvaluationSparkJob();
+		
+		job.setOptions(options);
+		
+		job.runJob();
+		
+		System.out.println(job.getText());
+		
+		**/
+		
+		
+	//	/**
+		String[] options = new String[19];
+		
+		options[0]="-input-file";
+		options[1]="C:\\Users\\Administrateur\\wekafiles\\packages\\distributedWekaSpark\\sample_data\\hypothyroid.csv";
+		options[2]="-names-file";
+		options[3]="C:\\Users\\Administrateur\\wekafiles\\packages\\distributedWekaSpark\\sample_data\\hypothyroid.names";
+		options[4]="-weka-jar";
+		options[5]="C:\\Users\\Administrateur\\weka.jar";
+		
+		options[6]="-header-file-name";
+		options[7]="hypothyroid.arff";
+		options[8]="-output-dir";
+		options[9]="C:\\Users\\Administrateur\\Desktop\\OutputDir";
+		options[10]="-master";
+		options[11]="local[*]";
+		
+		
+		options[12]="-W";
+		options[13]="weka.classifiers.functions.MultilayerPerceptron";
+		options[14]="--";
+		options[15]="-L";
+		
+		options[16]="0.3";
+		options[17]="-N";
+		
+		options[18]="500";
+		//options[19]="-G";
+		//options[20]="yes";
+		
+		
+		WekaClassifierEvaluationSparkJob job = new WekaClassifierEvaluationSparkJob();
+		
+		job.setOptions(options);
+		
+		job.runJob();
+		
+		System.out.println(job.getText());
+		
+		for(int i=0;i<job.getOptions().length;i++)
+		{
+			System.out.println(job.getOptions()[i]);
+		}
+		System.out.println("----------------- "+ job.getOptions() );
+	
+	//*/
+	}
+}
